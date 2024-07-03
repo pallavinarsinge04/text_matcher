@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text matcher</title>
+    <style>
+        body
+        {
+            justify-content: center;
+            display: flex;
+            background-color: #DBB5B5;
+        }
+        .container
+        {
+            text-align: center;
+        }
+        .inputBox
+        {
+            
+            justify-content: space-between;
+            height: 200px;
+            width: 400px;
+            display: block;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Text Comparator</h1></br>
+    
+    <input type="text" id="input1" onkeyup="compare_text()" class="inputBox"></br>
+    <input type="text" id="input2" onkeyup="compare_text()"class="inputBox"></br>
+    
+    <p class="match_result" id="match_text"></p>
+    </div>
+    <script>
+        function compare_text()
+        {
+            const input1Element = document.getElementById("input1");
+            const input2Element = document.getElementById("input2");
+
+            const resultElement = document.getElementById("match_text");
+
+            if(input1Element.value  ==  input2Element.value)
+            {
+                resultElement.innerText ="Text matched";
+            }
+            else
+            {
+                resultElement.innerText ="Text does not matched";
+            }
+        }
+    </script>
+</body>
+</html>
